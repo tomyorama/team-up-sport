@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <base href="/">
+        <title>Sport and Recreation</title>
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css(client) app/vendor.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css({.tmp,client}) app/app.css -->
+        <link rel="stylesheet" href="app/app.css">
+        <!-- injector:css -->
+        <link rel="stylesheet" href="app/modern-business.css">
+        <!-- endinjector -->
+        <!-- endbuild -->
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body ng-app="fussAppApp">
+        <!--[if lt IE 7]>
+                                                    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+       
+        <div ng-include="'components/navbar/navbar.html'"></div>
+        <ng-include src="'components/carousel/carousel.html'"></ng-include>
+        <!-- Add your site or application content here -->
+        <div ng-view=""></div>
+        <!-- /.container -->
+        <!--[if lt IE 9]>
+        <script src="bower_components/es5-shim/es5-shim.js"></script>
+        <script src="bower_components/json3/lib/json3.min.js"></script>
+        <![endif]-->
+        <script src="socket.io/socket.io.js"></script>
+        <!-- build:js(client) app/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/json3/lib/json3.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+        <script src="bower_components/angular-socket-io/socket.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:js({.tmp,client}) app/app.js -->
+        <script src="app/app.js"></script>
+        <!-- injector:js -->
+        <script src="app/account/account.js"></script>
+        <script src="app/account/login/login.controller.js"></script>
+        <script src="app/account/settings/settings.controller.js"></script>
+        <script src="app/account/signup/signup.controller.js"></script>
+        <script src="app/admin/admin.controller.js"></script>
+        <script src="app/admin/admin.js"></script>
+        <script src="app/competition/competition.controller.js"></script>
+        <script src="app/competition/competition.js"></script>
+        <script src="app/competition/competitionEdit.controller.js"></script>
+        <script src="app/competition/competitionNew.controller.js"></script>
+        <script src="app/main/main.controller.js"></script>
+        <script src="app/main/main.js"></script>
+        <script src="app/match/match.controller.js"></script>
+        <script src="app/match/match.js"></script>
+        <script src="app/teams/teams.controller.js"></script>
+        <script src="app/teams/teams.js"></script>
+        <script src="components/auth/auth.service.js"></script>
+        <script src="components/auth/user.service.js"></script>
+        <script src="components/carousel/carousel.controller.js"></script>
+        <script src="components/mongoose-error/mongoose-error.directive.js"></script>
+        <script src="components/navbar/navbar.controller.js"></script>
+        <script src="components/socket/socket.service.js"></script>
+        <!-- endinjector -->
+        <!-- endbuild -->
+        <script type="text/javascript">
+                    $('.carousel').carousel({
+                        interval: 5000 //CHANGES THE SPEED
+                    })
+        </script>
+    </body>
+</html>
