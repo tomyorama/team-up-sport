@@ -4,6 +4,7 @@ var mongoose = require('mongoose'),
 var CompetitionSchema = new Schema({
     name: String,
     info: String,
-    active: Boolean
+    active: Boolean,
+    description: String
 });
 module.exports = mongoose.model('Competition', CompetitionSchema);

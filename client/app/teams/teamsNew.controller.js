@@ -1,5 +1,5 @@
 'use strict';
-angular.module('fussAppApp').controller('CompetitionNewCtrl', function($scope, $http, $location) {
+angular.module('fussAppApp').controller('TeamsNewCtrl', function($scope, $http, $location) {
     //TEST
     // $('#myCarousel').hide();
     // $scope.$on("$destroy", function() {
@@ -12,7 +12,7 @@ angular.module('fussAppApp').controller('CompetitionNewCtrl', function($scope, $
         if (form.$valid) {
             $http({
                 method: 'POST',
-                url: 'api/competitions',
+                url: 'api/teams',
                 data: $scope.item
             }).
             success(function(data, status, headers, config) {
@@ -32,6 +32,6 @@ angular.module('fussAppApp').controller('CompetitionNewCtrl', function($scope, $
         }
     };
     $scope.cancel = function() {
-        $location.path('/competition');
+        $location.path('/teams');
     };
 });

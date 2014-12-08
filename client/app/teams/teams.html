@@ -10,6 +10,7 @@
                 <li><a href="/">Home</a>
                 </li>
                 <li class="active">Teams</li>
+                <li><a href="/teams/new">Create new</a>
             </ol>
         </div>
     </div>
@@ -18,20 +19,20 @@
         <!-- Projects Row -->
         <div class="row">
             <div class="col-md-6 img-portfolio">
-                <a href="portfolio-item.html">
+                <a href="/teams/edit/{{data.team1._id}}">
                 <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
                 </a>
                 <h3>
-                <a href="portfolio-item.html">{{data.team1.name}}</a>
+                <a href="/teams/edit/{{data.team1._id}}">{{data.team1.name}}</a>
                 </h3>
                 <p>{{data.team1.info}}</p>
             </div>
             <div class="col-md-6 img-portfolio" ng-show="data.team2">
-                <a href="portfolio-item.html">
+                <a href="/teams/edit/{{data.team2._id}}">
                 <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
                 </a>
                 <h3>
-                <a href="portfolio-item.html">{{data.team2.name}}</a>
+                <a href="/teams/edit/{{data.team2._id}}">{{data.team2.name}}</a>
                 </h3>
                 <p>{{data.team1.info}}</p>
             </div>
