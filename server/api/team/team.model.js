@@ -9,6 +9,7 @@ var TeamSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'User',
         playing: Boolean
-    }]
+    }],
+    owner: Schema.Types.ObjectId
 });
 module.exports = mongoose.model('Team', TeamSchema);
