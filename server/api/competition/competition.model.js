@@ -6,6 +6,9 @@ var CompetitionSchema = new Schema({
     info: String,
     active: Boolean,
     description: String,
-    owner: Schema.Types.ObjectId
+    owner: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    }
 });
 module.exports = mongoose.model('Competition', CompetitionSchema);

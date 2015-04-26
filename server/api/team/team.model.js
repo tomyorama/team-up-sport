@@ -7,9 +7,11 @@ var TeamSchema = new Schema({
     active: Boolean,
     players: [{
         type: Schema.Types.ObjectId,
-        ref: 'User',
-        playing: Boolean
+        ref: 'User'
     }],
-    owner: Schema.Types.ObjectId
+    owner: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    }
 });
 module.exports = mongoose.model('Team', TeamSchema);

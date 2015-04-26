@@ -1,10 +1,6 @@
 'use strict';
 angular.module('fussAppApp').controller('CompetitionEditCtrl', function($scope, $http, $routeParams) {
-    //TEST
-    $('#myCarousel').hide();
-    $scope.$on("$destroy", function() {
-        $('#myCarousel').show();
-    });
+
     $http({
         method: 'GET',
         url: 'api/competitions/' + $routeParams.id

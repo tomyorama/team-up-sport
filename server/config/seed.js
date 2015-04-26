@@ -12,6 +12,31 @@ var Team = require('../api/team/team.model');
 User.find({}).remove(function() {
     User.create({
         provider: 'local',
+        name: 'Test1 User',
+        email: 'test1@test.com',
+        password: 'test1'
+    },{
+        provider: 'local',
+        name: 'Test2 User',
+        email: 'test2@test.com',
+        password: 'test2'
+    },{
+        provider: 'local',
+        name: 'Test3 User',
+        email: 'test3@test.com',
+        password: 'test3'
+    },{
+        provider: 'local',
+        name: 'Test4 User',
+        email: 'test4@test.com',
+        password: 'test4'
+    },{
+        provider: 'local',
+        name: 'Test5 User',
+        email: 'test5@test.com',
+        password: 'test5'
+    },{
+        provider: 'local',
         name: 'Test User',
         email: 'test@test.com',
         password: 'test'

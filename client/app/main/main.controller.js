@@ -3,7 +3,11 @@
 angular.module('fussAppApp')
   .controller('MainCtrl', function ($scope, $http, socket) {
     $scope.awesomeThings = [];
-
+    //TEST
+    $('#myCarousel').show();
+    $scope.$on("$destroy", function() {
+        $('#myCarousel').hide();
+    });
     $http.get('/api/things').success(function(awesomeThings) {
       $scope.awesomeThings = awesomeThings;
       socket.syncUpdates('thing', $scope.awesomeThings);

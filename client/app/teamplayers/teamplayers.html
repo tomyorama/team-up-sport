@@ -1,0 +1,104 @@
+<!-- Page Content -->
+<div class="container">
+    <!-- Page Heading/Breadcrumbs -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Teams
+            <small>All teams</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="/">Home</a>
+                </li>
+                <li><a href="/teams">Teams</a>
+                </li>
+                <li class="active">{{item.name}}</li>
+                <li class="active">Search players</li>
+            </ol>
+        </div>
+    </div>
+    <!-- /.row -->
+    <!-- Blog Sidebar Widgets Column -->
+    <div class="col-md-12">
+        <!-- Blog Search Well -->
+        <div class="well">
+            <h4>Player Search</h4>
+            <div class="input-group">
+                <input type="text" class="form-control" ng-model="searchText">
+                <span class="input-group-btn">
+                <button class="btn btn-default" type="button" ng-click="search(searchText)"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+            <!-- /.input-group -->
+        </div>
+        <!-- Projects Row -->
+        <div class="row" ng-repeat="item in items">
+            <div class="col-md-4 img-portfolio" ng-show="item.item1">
+                <a href="{{item.item1.link}}">
+                <img class="img-responsive img-hover" src="//graph.facebook.com/{{item.item1.id}}/picture?width=700&height=400" alt="">
+                </a>
+                <h3>
+                <a href="{{item.item1.link}}">{{item.item1.name}}</a>
+                </h3>
+                <p>{{item.item1.email}}</p>
+            </div>
+            <div class="col-md-4 img-portfolio" ng-show="item.item2">
+                <a href="{{item.item2.link}}">
+                <img class="img-responsive img-hover" src="//graph.facebook.com/{{item.item2.id}}/picture?width=700&height=400" alt="">
+                </a>
+                <h3>
+                <a href="{{item.item2.link}}">{{item.item2.name}}</a>
+                </h3>
+                <p>{{item.item1.email}}</p>
+            </div>
+            <div class="col-md-4 img-portfolio" ng-show="item.item3">
+                <a href="{{item.item3.link}}">
+                <img class="img-responsive img-hover" src="//graph.facebook.com/{{item.item3.id}}/picture?width=700&height=400" alt="">
+                </a>
+                <h3>
+                <a href="{{item.item3.link}}">{{item.item3.name}}</a>
+                </h3>
+                <p>{{item.item1.email}}</p>
+            </div>
+        </div>
+        <!-- /.row -->
+        <hr>
+    </div>
+    <!-- Pagination -->
+    <div class="row text-center">
+        <div class="col-lg-12">
+            <ul class="pagination">
+                <li>
+                    <a href="#">&laquo;</a>
+                </li>
+                <li class="active">
+                    <a href="#">1</a>
+                </li>
+                <li>
+                    <a href="#">2</a>
+                </li>
+                <li>
+                    <a href="#">3</a>
+                </li>
+                <li>
+                    <a href="#">4</a>
+                </li>
+                <li>
+                    <a href="#">5</a>
+                </li>
+                <li>
+                    <a href="#">&raquo;</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /.row -->
+    <hr>
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Copyright &copy; Your Website 2014</p>
+            </div>
+        </div>
+    </footer>
+</div>

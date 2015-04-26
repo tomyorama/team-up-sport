@@ -1,10 +1,5 @@
 'use strict';
 angular.module('fussAppApp').controller('TeamsNewCtrl', function($scope, $http, $location) {
-    //TEST
-    // $('#myCarousel').hide();
-    // $scope.$on("$destroy", function() {
-    //     $('#myCarousel').show();
-    // });
     $scope.item = {};
     $scope.errors = {};
     $scope.create = function(form) {

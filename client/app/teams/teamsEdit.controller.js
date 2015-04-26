@@ -1,10 +1,5 @@
 'use strict';
 angular.module('fussAppApp').controller('TeamsEditCtrl', function($scope, $http, $routeParams, $location) {
-    //TEST
-    $('#myCarousel').hide();
-    $scope.$on("$destroy", function() {
-        $('#myCarousel').show();
-    });
     $http({
         method: 'GET',
         url: 'api/teams/' + $routeParams.id
